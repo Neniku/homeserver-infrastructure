@@ -1,10 +1,10 @@
-# 🚀 Ultimate Home Server (NAS) Infrastructure
+# Ultimate Home Server (NAS) Infrastructure
 
 Benvenuto nella repository che documenta l'infrastruttura completa del mio Home Server. Questo progetto nasce dall'esigenza di consolidare svariati servizi essenziali (lavorativi e di intrattenimento) in un'unica macchina, mantenendo però un'ossessione rigorosa per la **sicurezza**, l'**isolamento dei dati**, l'**automazione** e la **ridondanza**.
 
 ---
 
-## 🎯 Filosofia ed Esigenze di Progetto
+## Filosofia ed Esigenze di Progetto
 
 Quando ho progettato questo server, avevo obiettivi e paletti molto chiari:
 
@@ -15,7 +15,7 @@ Quando ho progettato questo server, avevo obiettivi e paletti molto chiari:
 
 ---
 
-## 🛡️ Architettura di Rete e Sicurezza (Tailscale)
+## Architettura di Rete e Sicurezza (Tailscale)
 
 La sicurezza perimetrale è gestita interamente tramite **Tailscale** (basato su WireGuard). Il NAS opera come nodo di un'architettura **Zero Trust**.
 
@@ -29,7 +29,7 @@ La sicurezza perimetrale è gestita interamente tramite **Tailscale** (basato su
 
 ---
 
-## 💾 Gestione dello Storage e "Fail-Safe" Mount
+## Gestione dello Storage e "Fail-Safe" Mount
 
 Il server gestisce svariati terabyte di storage, divisi in compartimenti logici:
 
@@ -49,11 +49,11 @@ All'interno della radice dei dischi fisici multimediali ho creato un file fittiz
 
 ---
 
-## 📦 Stack dei Servizi (Docker Compose)
+## Stack dei Servizi (Docker Compose)
 
 Tutti i servizi sono modulari, ospitati in `/opt/appdata/`, per garantire portabilità e isolamento.
 
-### 1. 🗞️ Gestionale Aziendale
+### 1. Gestionale Aziendale
 
 Stack sviluppato interamente custom.
 
@@ -63,7 +63,7 @@ Stack sviluppato interamente custom.
 
 > **Perché isolato?** Se un servizio come qBittorrent venisse compromesso tramite una vulnerabilità zero-day, l'attaccante non potrebbe ruotare verso il database aziendale, essendo fisicamente su un network Docker non intersecante.
 
-### 2. 🎬 Media Server (L'Ecosistema *arr)
+### 2. Media Server (L'Ecosistema *arr)
 
 Automatizza il reperimento, la conversione e la distribuzione di contenuti multimediali.
 
@@ -78,13 +78,13 @@ Automatizza il reperimento, la conversione e la distribuzione di contenuti multi
 | **Jellyseerr**   | Portale "Netflix-style" per le richieste di contenuto                   |
 | **qBittorrent**  | Client di download                                                       |
 
-### 3. 🔐 Password Manager
+### 3. Password Manager
 
 - **Vaultwarden**: Self-hosted Bitwarden-compatible password manager.
 
 > Hostarsi le password localmente elimina il rischio di furti da data-breach aziendali (stile LastPass). Configurato con SMTP per l'invio di token ai dispositivi.
 
-### 4. 🎛️ Amministrazione, Telemetria e Alerter Custom
+### 4. Amministrazione, Telemetria e Alerter Custom
 
 Monitoraggio su due livelli:
 
@@ -97,7 +97,7 @@ Monitoraggio su due livelli:
 
 ---
 
-## 🛟 Strategia di Backup
+## Strategia di Backup
 
 I backup sono delegati nativamente al sistema operativo Linux tramite **Systemd Timers** (più affidabili di `cron`), senza dipendere dal demone Docker.
 
