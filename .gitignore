@@ -1,0 +1,42 @@
+# Variabili d'ambiente — MAI versionare
+.env
+.env.*
+!.env.example
+
+# Segreti e credenziali
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+secrets/
+tokens/
+
+# Dati di backup locali
+*.sql
+*.dump
+*.tar.gz
+*.zip
+
+# File di configurazione con dati sensibili
+config/local/
+config/production/
+traefik/acme.json
+nginx/certs/
+
+# Appdata e volumi Docker
+appdata/
+data/
+
+# OS e editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Log
+*.log
+logs/
