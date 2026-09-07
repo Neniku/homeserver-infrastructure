@@ -39,7 +39,7 @@ Il server gestisce svariati terabyte di storage, divisi in compartimenti logici:
 | `/data_film`  | 3.6 TB      | HDD       | Libreria film                                |
 | `/data_serie` | 3.6 TB      | HDD       | Libreria serie TV                            |
 | `/cache`      | 293 GB      | SSD       | Caching download e transcoding video         |
-| `/backup`     | ~460 GB     | SSD/HDD   | Destinazione backup notturni cifrati         |
+| `/backup`     | ~460 GB     | HDD   | Destinazione backup notturni cifrati         |
 
 ### Il meccanismo del `.mounted` file
 
